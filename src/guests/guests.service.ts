@@ -14,7 +14,12 @@ export class GuestsService {
 
 
     getAllGuests(): Promise<Guest[]> {
-        return this.guestRepository.find()
+        try {
+            return this.guestRepository.find()
+
+        } catch (error) {
+            return error.message
+        }
     }
 
     createGuest(guestObject: GuestDto) {

@@ -17,4 +17,5 @@ export class GuestsController {
     createGuest(@Body() newGuest: GuestDto) {
         return this.guestService.createGuest(newGuest)
     }
+
 }

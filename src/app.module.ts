@@ -10,6 +10,8 @@ import { FoodGuest } from './entities/FoodGuest.entity';
 import { FoodController } from './food/food.controller';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { FoodGuestsService } from './food-guests/food-guests.service';
+import { FoodGuestsModule } from './food-guests/food-guests.module';
 
 
 @Module({
@@ -25,7 +27,8 @@ import { AppService } from './app.service';
       synchronize: true,
     }),
     FoodModule,
-    GuestsModule
+    GuestsModule,
+    FoodGuestsModule
   ],
   controllers: [AppController],
   providers: [AppService]
